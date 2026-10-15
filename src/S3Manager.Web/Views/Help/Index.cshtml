@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Help";
+}
+
+<div class="container">
+    <h2>Help & Documentation</h2>
+    
+    <div class="card mt-3">
+        <div class="card-header">
+            <h5>IAM Policy Examples</h5>
+        </div>
+        <div class="card-body">
+            <h6>Full Access to One Bucket</h6>
+            <pre><code>{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket","s3:GetBucketLocation"],
+      "Resource": "arn:aws:s3:::my-bucket"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["s3:GetObject","s3:PutObject","s3:DeleteObject"],
+      "Resource": "arn:aws:s3:::my-bucket/*"
+    }
+  ]
+}</code></pre>
+        </div>
+    </div>
+</div>

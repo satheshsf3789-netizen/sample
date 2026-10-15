@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "AOCBmS08gBA=",
+  "success": true,
+  "projectFilePath": "/home/user/sample/src/S3Manager.Web/S3Manager.Web.csproj",
+  "expectedPackageFiles": [
+    "/home/user/.nuget/packages/awssdk.core/4.0.102.11/awssdk.core.4.0.102.11.nupkg.sha512",
+    "/home/user/.nuget/packages/awssdk.s3/4.0.104.4/awssdk.s3.4.0.104.4.nupkg.sha512",
+    "/home/user/.nuget/packages/microsoft.netcore.app.ref/8.0.31/microsoft.netcore.app.ref.8.0.31.nupkg.sha512",
+    "/home/user/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.31/microsoft.aspnetcore.app.ref.8.0.31.nupkg.sha512",
+    "/home/user/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.31/microsoft.netcore.app.host.linux-x64.8.0.31.nupkg.sha512"
+  ],
+  "logs": []
+}

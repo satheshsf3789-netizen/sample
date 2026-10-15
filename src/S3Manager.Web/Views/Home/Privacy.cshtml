@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Privacy & Security";
+}
+
+<div class="container mt-4">
+    <h2>Privacy & Security</h2>
+    
+    <div class="alert alert-info mt-3">
+        <h5>How S3 Manager Protects Your Credentials</h5>
+        <ul>
+            <li><strong>Runtime Input:</strong> Credentials are never embedded or committed</li>
+            <li><strong>Encrypted Storage:</strong> Credentials are encrypted using ASP.NET Core Data Protection API</li>
+            <li><strong>Session-Only:</strong> Credentials live only in your server session</li>
+            <li><strong>HttpOnly Cookies:</strong> Session cookies are HttpOnly and SameSite=Strict</li>
+            <li><strong>No Logging:</strong> Secrets are never written to logs</li>
+        </ul>
+    </div>
+</div>
