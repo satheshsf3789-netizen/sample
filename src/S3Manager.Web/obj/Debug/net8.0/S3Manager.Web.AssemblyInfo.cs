@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("S3Manager.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e4bd712e5097a156580cc7dfbf365a5f0e333c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89f6a8f97b046309c0813036d5b08050135c1da2")]
 [assembly: System.Reflection.AssemblyProductAttribute("S3Manager.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("S3Manager.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

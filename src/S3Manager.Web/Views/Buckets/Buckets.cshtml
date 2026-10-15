@@ -33,7 +33,7 @@ else
                         <td><strong>@bucket.Name</strong></td>
                         <td>@bucket.CreationDate?.ToUniversalTime().ToString("g")</td>
                         <td>
-                            <a href="#" class="btn btn-sm btn-info">Browse</a>
+                            <a asp-controller="Objects" asp-action="List" asp-route-bucket="@bucket.Name" class="btn btn-sm btn-info">Browse</a>
                             <a href="#" class="btn btn-sm btn-warning">Details</a>
                             <a href="#" class="btn btn-sm btn-danger">Delete</a>
                         </td>
