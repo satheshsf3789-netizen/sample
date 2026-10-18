@@ -1,0 +1,72 @@
+@model ConnectViewModel
+
+@{
+    ViewData["Title"] = "Connect to S3";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h4 class="mb-0">Connect to S3</h4>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-action="Connect">
+                    @Html.AntiForgeryToken()
+                    
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger">
+                            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                            {
+                                <div>@error.ErrorMessage</div>
+                            }
+                        </div>
+                    }
+
+                    <div class="mb-3">
+                        <label for="AccessKey" class="form-label">Access Key</label>
+                        <input type="text" class="form-control" id="AccessKey" asp-for="AccessKey" placeholder="AKIAIOSFODNN7EXAMPLE" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="SecretKey" class="form-label">Secret Key</label>
+                        <input type="password" class="form-control" id="SecretKey" asp-for="SecretKey" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="SessionToken" class="form-label">Session Token (optional)</label>
+                        <input type="password" class="form-control" id="SessionToken" asp-for="SessionToken">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Region" class="form-label">Region</label>
+                        <select class="form-select" id="Region" asp-for="Region">
+                            <option value="us-east-1">US East (N. Virginia)</option>
+                            <option value="us-west-1">US West (N. California)</option>
+                            <option value="us-west-2">US West (Oregon)</option>
+                            <option value="eu-west-1">EU (Ireland)</option>
+                            <option value="eu-central-1">EU (Frankfurt)</option>
+                            <option value="ap-southeast-1">Asia Pacific (Singapore)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ServiceUrl" class="form-label">Custom Service URL (optional)</label>
+                        <input type="url" class="form-control" id="ServiceUrl" asp-for="ServiceUrl" placeholder="https://minio.example.com">
+                        <small class="form-text text-muted">For S3-compatible storage like MinIO</small>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="ReadOnly" asp-for="ReadOnly">
+                        <label class="form-check-label" for="ReadOnly">
+                            Read-only mode (no mutations)
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Connect</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
